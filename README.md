@@ -44,7 +44,7 @@ A professional-grade, autonomous research agent powered by LangChain and Groq LL
     ```ini
     GROQ_API_KEY=gsk_your_actual_api_key_here
     ```
-    *(Note: The `.env` file is git-ignored to keep your secrets safe.)*
+
 
 ##  Usage
 
@@ -59,7 +59,3 @@ Follow the prompts to enter your research topic (e.g., *"Quantum Computing appli
 1.  **Think**: Formulate a search strategy.
 2.  **Search & Read**: Gather information from multiple sources.
 3.  **Write**: Generate a comprehensive markdown report (`report.md`) in the current directory.
-
-##  License
-
-This project is open-source and available under the MIT License.
