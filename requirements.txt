@@ -1,0 +1,7 @@
+langchain==0.2.16
+langchain-community==0.2.16
+langchain-groq==0.1.9
+duckduckgo-search
+requests
+beautifulsoup4
+python-dotenv
