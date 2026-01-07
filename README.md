@@ -59,3 +59,6 @@ Follow the prompts to enter your research topic (e.g., *"Quantum Computing appli
 1.  **Think**: Formulate a search strategy.
 2.  **Search & Read**: Gather information from multiple sources.
 3.  **Write**: Generate a comprehensive markdown report (`report.md`) in the current directory.
+
+
+### Next Stpes : Build LateX code output, and also its direct export agentically, rather than being tied to markdown
