@@ -1,6 +1,6 @@
 # PaperOps.ai - a DeepResearch Agent 
 
-A professional-grade, autonomous research agent powered by LangChain and LLM. This tool intelligently searches the web, analyzes academic sources, and compiles structured research reports on any given topic.
+An autonomous research agent powered by LangChain and LLM. This tool intelligently searches the web, analyzes academic sources, and compiles structured research reports on any given topic.
 
 ##  Features
 
