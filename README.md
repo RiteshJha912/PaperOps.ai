@@ -8,36 +8,15 @@ A professional-grade, autonomous research agent powered by LangChain and Groq LL
 
 PaperOps.ai is built on a modular architecture separating orchestration, the reasoning engine, and the execution toolset:
 
-```mermaid
 graph TD
-    User([User]) -->|Input Topic| Main[main.py: Orchestrator]
-    Main -->|Dynamic Instruction| Executor[AgentExecutor]
-    
-    subgraph Agent Engine (agent.py)
-        Executor -->|Loop Prompt| ReAct[ReAct Agent]
-        ReAct -->|Prompt Template| Prompt[AGENT_PROMPT]
-        Prompt -->|LLM Request| LLM[MellowGroq LLM Wrapper]
+    User([User]) -->|Input Topic| Main["main.py: Orchestrator"]
+    Main -->|Dynamic Instruction| Executor["AgentExecutor"]
+
+    subgraph AE["Agent Engine (agent.py)"]
+        Executor -->|Loop Prompt| ReAct["ReAct Agent"]
+        ReAct -->|Prompt Template| Prompt["AGENT_PROMPT"]
+        Prompt -->|LLM Request| LLM["MellowGroq LLM Wrapper"]
     end
-    
-    LLM -->|Choose Action| ActionDecision{Action Decision}
-    ActionDecision -->|web_search| SearchTool[web_search tool]
-    ActionDecision -->|read_page| ReadTool[read_page tool]
-    ActionDecision -->|Final Answer| Finish[Extract Report]
-    
-    subgraph Tool Suite (tools.py)
-        SearchTool -->|Query with 2s Delay| DDG[DuckDuckGo Search Engine]
-        DDG -->|Snippets| SearchTool
-        ReadTool -->|HTTP GET Request| Web[Web Page HTML]
-        Web -->|BeautifulSoup4 <p> extraction| Scraper[Raw Text Extractor]
-        Scraper -->|Truncate to 10k chars| Context[Context Shard]
-        Context -->|Direct LLM Call| SumLLM[MellowGroq LLM]
-        SumLLM -->|Pre-summarized Text| ReadTool
-    end
-    
-    SearchTool -->|Observation| Executor
-    ReadTool -->|Observation| Executor
-    Finish -->|Write Markdown| Output[report.md]
-```
 
 ### Component Breakdown
 1. **Orchestrator ([main.py](file:///d:/Ritesh/Documents/RJ/AllWork/AgenticAI/researchhelp/main.py))**: Bootstraps environment variables, prompt instructions, runs the interactive CLI loop, invokes the agent executor, and saves the final markdown payload to `report.md`.
