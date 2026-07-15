@@ -1,10 +1,6 @@
 # PaperOps.ai - DeepResearch Autonomous Agent
 
-<<<<<<< HEAD
-A professional-grade, autonomous research agent powered by LangChain and Groq LLMs. This system uses the **ReAct (Reason + Act)** pattern to dynamically plan, search the web, scrape academic/informational pages, distill insights, and compile structured research reports.
-=======
-An autonomous research agent powered by LangChain and LLM. This tool intelligently searches the web, analyzes academic sources, and compiles structured research reports on any given topic.
->>>>>>> 1ffe265e728c1b0ab9e6f1cdb5f574d0b9691c2f
+A professional-grade, autonomous research agent powered by LangChain and Groq LLMs. This system uses the **ReAct (Reason + Act)** pattern to dynamically plan, search the web, scrape academic and informational sources, distill insights, and compile structured research reports.
 
 ---
 
